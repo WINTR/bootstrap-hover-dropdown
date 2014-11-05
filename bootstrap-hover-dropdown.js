@@ -51,6 +51,10 @@
                     return true;
                 }
 
+                //prevent hover event for collapsed navbar state
+                if ($(window).width() < options.desktopBreakPoint) {
+                  return false 
+                }
                 openDropdown(event);
             }, function () {
                 timeout = window.setTimeout(function () {
